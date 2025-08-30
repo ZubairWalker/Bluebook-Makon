@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .selected-choice {
+            background-color: #3b82f6 !important;
+            color: white !important;
+        }
+    </style>
+</head>
+<body class="bg-white text-black min-h-screen">
+
+    <div class="container mx-auto px-6 py-8">
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-2xl font-bold">Module 1</h1>
+            <div class="text-center">
+                <div id="timer" class="text-3xl font-mono font-bold text-black">32:00</div>
+            </div>
+            <div class="w-20"></div> <!-- Spacer for centering -->
+        </div>
+
+        <hr style="border: 2px solid black; margin: 20px 0px" />
+
+        <!-- Main Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-24">
+            <!-- Reading Passage (Left Side) -->
+            <div class="p-6 rounded-lg">
+                <h2 class="text-xl font-bold mb-4">Reading Passage</h2>
+                <div class="text-base leading-relaxed space-y-4">
+                    <p>The concept of artificial intelligence has evolved dramatically since its inception in the 1950s. Initially, researchers believed that creating machines capable of human-like thinking would be a relatively straightforward task, achievable within a few decades. However, as scientists delved deeper into the complexities of human cognition, they discovered that replicating intelligence artificially was far more challenging than anticipated.</p>
+                    
+                    <p>Early AI systems were rule-based, relying on explicit programming to handle specific tasks. These systems excelled in narrow domains but struggled with the flexibility and adaptability that characterize human intelligence. The breakthrough came with the development of machine learning algorithms, particularly neural networks, which could learn patterns from data rather than following pre-programmed rules.</p>
+                </div>
+            </div>
+
+            <!-- Questions (Right Side) -->
+            <div class="p-6 rounded-lg">
+
+                
+                <div id="question-container">
+                    <!-- Questions will be populated by JavaScript -->
+                </div>
+
+                <!-- Navigation Buttons -->
+                <!-- <div class="flex justify-between mt-8">
+                    <button id="prev-btn" class="px-6 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                        Previous
+                    </button>
+                    <button id="next-btn" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                        Next
+                    </button>
+                </div> -->
+            </div>
+        </div>
+
+        <hr style="border: 2px solid black; margin: 20px 0px" />
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 0px 30px;">
+        <h3 class="font-bold text-xl">Sardor Alibekov</h3>
+        <div
+          class="mt-8"
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            gap: 20px;
+          "
+        >
+          <button
+            id="prev-btn"
+            class="px-6 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            disabled
+          >
+            Previous
+          </button>
+          <button
+            id="next-btn"
+            class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            disabled
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <script src="./javascript/javascript.js"></script>
+</body>
+</html>
+
+
