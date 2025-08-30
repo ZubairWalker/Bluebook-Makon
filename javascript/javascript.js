@@ -17,23 +17,6 @@ function updateTimer() {
   timeLeft--;
 }
 
-const btn = document.getElementById("fullscreenBtn");
-
-btn.addEventListener("click", () => {
-  if (!document.fullscreenElement) {
-    // Expand to fullscreen
-    document.documentElement.requestFullscreen();
-    btn.textContent = "Shrink";
-    btn.classList.remove("bg-blue-500", "hover:bg-blue-600");
-    btn.classList.add("bg-red-500", "hover:bg-red-600");
-  } else {
-    // Exit fullscreen
-    document.exitFullscreen();
-    btn.textContent = "Expand";
-    btn.classList.remove("bg-red-500", "hover:bg-red-600");
-    btn.classList.add("bg-blue-500", "hover:bg-blue-600");
-  }
-});
 
 const timerInterval = setInterval(updateTimer, 1000);
 
@@ -41,7 +24,7 @@ const timerInterval = setInterval(updateTimer, 1000);
 const questions = [
   {
     question:
-      "According to the passage, what was the initial expectation about creating artificial intelligence?",
+      "1) According to the passage, what was the initial expectation about creating artificial intelligence?",
     choices: [
       "It would take centuries to achieve",
       "It would be relatively straightforward and achievable within decades",
@@ -51,7 +34,7 @@ const questions = [
     correct: 1,
   },
   {
-    question: "What was the main limitation of early AI systems?",
+    question: "2) What was the main limitation of early AI systems?",
     choices: [
       "They were too expensive to develop",
       "They required too much computational power",
@@ -61,7 +44,7 @@ const questions = [
     correct: 2,
   },
   {
-    question: "What breakthrough enabled AI systems to become more flexible?",
+    question: "3) What breakthrough enabled AI systems to become more flexible?",
     choices: [
       "Faster computer processors",
       "Machine learning algorithms and neural networks",
@@ -71,7 +54,7 @@ const questions = [
     correct: 1,
   },
   {
-    question: "Which of the following tasks can modern AI systems perform?",
+    question: "4) Which of the following tasks can modern AI systems perform?",
     choices: [
       "Only mathematical calculations",
       "Face recognition, language translation, and art creation",
@@ -81,7 +64,7 @@ const questions = [
     correct: 1,
   },
   {
-    question: "What distinguishes human intelligence from current AI systems?",
+    question: "5) What distinguishes human intelligence from current AI systems?",
     choices: [
       "Humans are faster at processing information",
       "Humans can transfer knowledge across different domains",
@@ -91,7 +74,7 @@ const questions = [
     correct: 1,
   },
   {
-    question: "What concerns are mentioned about the future of AI?",
+    question: "6) What concerns are mentioned about the future of AI?",
     choices: [
       "Only technical limitations",
       "Ethics, job displacement, and risks of superintelligent systems",
@@ -101,7 +84,7 @@ const questions = [
     correct: 1,
   },
   {
-    question: "How are today's AI systems best described?",
+    question: "7) How are today's AI systems best described?",
     choices: [
       "General problem-solvers",
       "Narrow specialists",
@@ -112,12 +95,12 @@ const questions = [
   },
   {
     question:
-      "When was the concept of artificial intelligence first introduced?",
+      "8) When was the concept of artificial intelligence first introduced?",
     choices: ["1940s", "1950s", "1960s", "1970s"],
     correct: 1,
   },
   {
-    question: "What type of learning do neural networks use?",
+    question: "9) What type of learning do neural networks use?",
     choices: [
       "Rule-based programming",
       "Pattern recognition from data",
@@ -127,7 +110,7 @@ const questions = [
     correct: 1,
   },
   {
-    question: "What is artificial general intelligence?",
+    question: "10) What is artificial general intelligence?",
     choices: [
       "AI that works only in specific domains",
       "AI that can transfer knowledge across different areas like humans",
@@ -137,7 +120,7 @@ const questions = [
     correct: 1,
   },
   {
-    question: "According to the passage, what makes human learning unique?",
+    question: "11) According to the passage, what makes human learning unique?",
     choices: [
       "Humans learn faster than machines",
       "Humans can apply learning from one area to solve problems in different fields",
@@ -148,7 +131,7 @@ const questions = [
   },
   {
     question:
-      "What was discovered as scientists studied human cognition more deeply?",
+      "12) What was discovered as scientists studied human cognition more deeply?",
     choices: [
       "Human intelligence was simpler than expected",
       "Replicating intelligence artificially was more challenging than anticipated",
@@ -158,7 +141,7 @@ const questions = [
     correct: 1,
   },
   {
-    question: "What characterizes the flexibility of human intelligence?",
+    question: "13) What characterizes the flexibility of human intelligence?",
     choices: [
       "Speed of processing",
       "Adaptability and knowledge transfer",
@@ -169,7 +152,7 @@ const questions = [
   },
   {
     question:
-      "What field is NOT mentioned as an area where AI demonstrates remarkable capabilities?",
+      "14) What field is NOT mentioned as an area where AI demonstrates remarkable capabilities?",
     choices: [
       "Natural language processing",
       "Computer vision",
@@ -180,7 +163,7 @@ const questions = [
   },
   {
     question:
-      "What is the main challenge facing society regarding AI development?",
+      "15) What is the main challenge facing society regarding AI development?",
     choices: [
       "Lack of computational resources",
       "Balancing benefits while mitigating risks",
@@ -190,7 +173,7 @@ const questions = [
     correct: 1,
   },
   {
-    question: "How do current AI systems differ from human problem-solving?",
+    question: "16) How do current AI systems differ from human problem-solving?",
     choices: [
       "AI systems are always more accurate",
       "AI systems cannot easily transfer knowledge to new domains",
@@ -201,7 +184,7 @@ const questions = [
   },
   {
     question:
-      "What does the passage suggest about setting expectations for AI?",
+      "17) What does the passage suggest about setting expectations for AI?",
     choices: [
       "Expectations should be unlimited",
       "Understanding current limitations is crucial for realistic expectations",
@@ -212,7 +195,7 @@ const questions = [
   },
   {
     question:
-      "What type of intelligence do humans possess that current AI lacks?",
+      "18) What type of intelligence do humans possess that current AI lacks?",
     choices: [
       "Emotional intelligence only",
       "General intelligence with cross-domain knowledge transfer",
@@ -223,7 +206,7 @@ const questions = [
   },
   {
     question:
-      "According to the passage, what was the original timeline expectation for achieving human-like AI?",
+      "19) According to the passage, what was the original timeline expectation for achieving human-like AI?",
     choices: [
       "A few years",
       "A few decades",
@@ -234,7 +217,7 @@ const questions = [
   },
   {
     question:
-      "What advantage do machine learning algorithms have over rule-based systems?",
+      "20) What advantage do machine learning algorithms have over rule-based systems?",
     choices: [
       "They are cheaper to develop",
       "They can learn patterns from data rather than following pre-programmed rules",
@@ -245,7 +228,7 @@ const questions = [
   },
   {
     question:
-      "What does the passage indicate about the current state of AI research?",
+      "21) What does the passage indicate about the current state of AI research?",
     choices: [
       "It has reached its peak",
       "It continues to advance rapidly",
@@ -256,7 +239,7 @@ const questions = [
   },
   {
     question:
-      "What is mentioned as a key difference between early and modern AI systems?",
+      "22) What is mentioned as a key difference between early and modern AI systems?",
     choices: [
       "Modern systems are smaller",
       "Modern systems can learn from data instead of just following rules",
@@ -266,7 +249,7 @@ const questions = [
     correct: 1,
   },
   {
-    question: "What does the passage suggest about the debate surrounding AI?",
+    question: "23) What does the passage suggest about the debate surrounding AI?",
     choices: [
       "It has been resolved",
       "It only concerns technical aspects",
@@ -276,7 +259,7 @@ const questions = [
     correct: 2,
   },
   {
-    question: "How does the passage characterize the evolution of AI?",
+    question: "24) How does the passage characterize the evolution of AI?",
     choices: [
       "Steady and predictable",
       "Dramatic since the 1950s",
@@ -286,7 +269,7 @@ const questions = [
     correct: 1,
   },
   {
-    question: "What is the main focus of the final paragraph?",
+    question: "25) What is the main focus of the final paragraph?",
     choices: [
       "Future technological developments",
       "The importance of understanding AI's current limitations",
@@ -297,7 +280,7 @@ const questions = [
   },
   {
     question:
-      "According to the passage, what represents the next major milestone in AI development?",
+      "26) According to the passage, what represents the next major milestone in AI development?",
     choices: [
       "Faster processing speeds",
       "Artificial general intelligence",
@@ -308,7 +291,7 @@ const questions = [
   },
   {
     question:
-      "What does the passage suggest about the relationship between AI capabilities and human expectations?",
+      "27) What does the passage suggest about the relationship between AI capabilities and human expectations?",
     choices: [
       "Expectations should always exceed capabilities",
       "Capabilities have exceeded all expectations",
